@@ -1,5 +1,6 @@
 package com.johnlewis.base;
 
+import com.johnlewis.util.ConfigReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -10,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Properties;
 
 public class WebDriverBase {
     public static WebDriver driver;
@@ -52,9 +54,12 @@ public class WebDriverBase {
     }
 
     private static void openHomePage() {
-        driver.get("https://www.johnlewis.com/");
+        Properties properties=ConfigReader.loadConfig();
+        driver.get(properties.getProperty("base.url"));
         driver.findElement(By.cssSelector("[data-test='allow-all']")).click();
     }
+
+
 
 
     public static void close() {
