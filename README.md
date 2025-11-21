@@ -6,6 +6,7 @@ This project automates test scenarios for the John Lewis e-commerce website (htt
 - `src/test/resources/features` - Gherkin feature files
 - `src/test/java/johnlewis/stepdefinations` - Cucumber step definitions
 - `src/main/java/johnlewis/pages` - Page Object classes
+- - `src/main/resources/config.properties` - properties information
 - `pom.xml` - Maven build file
 
 ## How to run
