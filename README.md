@@ -12,7 +12,7 @@ This project automates test scenarios for the John Lewis e-commerce website (htt
 1. Ensure Java 17 and Maven are installed.
 2.From project root run:
 ```
-mvn test
+mvn clean test
 ```
 This will execute the tests and produce a report at `target/cucumber-report.html`.
 
